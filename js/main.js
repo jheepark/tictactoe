@@ -2,6 +2,8 @@ const checkClass = function(){
   if (logic1() || logic2() || logic3() || logic4() || logic5() || logic6() || logic7() || logic8() || logic9() || logic10() || logic11() || logic12() || logic13() || logic14() || logic15() || logic16()){
   alert ("you have won!");
   reset();
+} else {
+  noWin();
 }
 };
 
@@ -10,28 +12,28 @@ let numClicks = 0;
 const reset = function(){
   $('.hidden').removeClass('hidden').addClass('box').text('');
   $('.hiddenO').removeClass('hiddenO').addClass('box').text('');
+  numClicks = 0;
 }
 
 let noWin = function(){
   if (numClicks === 9){
+    alert("You have drawn!");
     reset();
   }
 }
 
 $(document).on('click', '.box', function(){
   if (numClicks % 2 === 0) {
-    $(this).text('X');
+  $(this).text('X');
   $(this).removeClass('box').addClass('hiddenO').css({'display':'inline-block'});
   numClicks++;
   checkClass();
-  noWin();
   }
   else {
   $(this).text('O');
   $(this).removeClass('box').addClass('hidden').css({'display':'inline-block'});
   numClicks++;
   checkClass();
-  noWin();
   }
 });
 
