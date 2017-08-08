@@ -1,3 +1,49 @@
+let boardArray = [1,2,3,4,5,6,7,8,9];
+
+let xPlayer = true;
+let oPlayer = false;
+
+$(document).on('click', '.chooseplayer', function(){
+  if ($(this).hasClass('x')){
+    xPlayer = true;
+    $('.Player').addClass('hide');
+  } else {
+    oPlayer = true;
+    $('.Player').addClass('hide');
+  }
+});
+
+
+$(document).on('click', '.box', function(){
+  if (xplayer) {
+    $(this).text('X');
+    $(this).removeClass('box').addClass('hiddenO').css({'display':'inline-block'});
+    numClicks++;
+    checkClass();
+    xPlayer = false;
+    oPlayer = true;
+    }
+    else {
+    $(this).text('O');
+    $(this).removeClass('box').addClass('hidden').css({'display':'inline-block'});
+    numClicks++;
+    checkClass();
+    }
+  } else if (oplayer){
+  if (numClicks % 2 === 0) {
+  $(this).text('O');
+  $(this).removeClass('box').addClass('hiddenO').css({'display':'inline-block'});
+  numClicks++;
+  checkClass();
+  }
+  else {
+  $(this).text('X');
+  $(this).removeClass('box').addClass('hidden').css({'display':'inline-block'});
+  numClicks++;
+  checkClass();
+  }
+}
+});
 
 
 const checkClass = function(){
@@ -24,8 +70,6 @@ const reset = function(){
   $('.hiddenO').removeClass('hiddenO').addClass('box').text('');
   numClicks = 0;
   $('.Player').toggleClass('hide');
-  $('.Win').empty();
-  $('.Win').append($('.playagain'));
 }
 
 let noWin = function(){
@@ -38,51 +82,6 @@ $(document).on('click', '.playagain', function(){
   $('.Win').hide();
   reset();
 });
-
-var xplayer = false;
-var oplayer = false;
-
-$(document).on('click', '.box', function(){
-  if (xplayer) {
-    if (numClicks % 2 === 0) {
-    $(this).text('X');
-    $(this).removeClass('box').addClass('hiddenO').css({'display':'inline-block'});
-    numClicks++;
-    checkClass();
-    }
-    else {
-    $(this).text('O');
-    $(this).removeClass('box').addClass('hidden').css({'display':'inline-block'});
-    numClicks++;
-    checkClass();
-    }
-  } else if (oplayer){
-  if (numClicks % 2 === 0) {
-  $(this).text('O');
-  $(this).removeClass('box').addClass('hiddenO').css({'display':'inline-block'});
-  numClicks++;
-  checkClass();
-  }
-  else {
-  $(this).text('X');
-  $(this).removeClass('box').addClass('hidden').css({'display':'inline-block'});
-  numClicks++;
-  checkClass();
-  }
-}
-});
-
-
-$(document).on('click', '.chooseplayer', function(){
-  if ($(this).hasClass('x')){
-    xplayer = true;
-    $('.Player').addClass('hide');
-  } else {
-    oplayer = true;
-    $('.Player').addClass('hide');
-  }
-});
-
 
 let logic1 = function(){
   if ($('#box1').hasClass("hiddenO") && $('#box2').hasClass("hiddenO") && $('#box3').hasClass("hiddenO")) {

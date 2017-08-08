@@ -6,18 +6,18 @@ body {
 .container {
   box-sizing: border-box;
   margin: 0 auto;
-  width: 1000px;
+  width: 750px;
   padding-bottom: 200px;
 }
 .boxes {
   box-sizing: border-box;
-  width: 1000px;
+  width: 750px;
   margin: 0 auto;
   text-align: center;
 }
 h1 {
   box-sizing: border-box;
-  font-size: 120px;
+  font-size: 90px;
   color: black;
   text-align: center;
   font-family: 'Share Tech Mono', monospace;
@@ -26,42 +26,42 @@ h1 {
 .box {
   box-sizing: border-box;
   display: inline-block;
-  height: 300px;
-  width: 300px;
+  height: 150px;
+  width: 150px;
   background-color: #0F7173;
   text-align: center;
-  margin: 10px;
-  line-height: 300px;
+  margin: 5px;
+  line-height: 150px;
   vertical-align: top;
 }
 
 .hidden {
   box-sizing: border-box;
   display: none;
-  font-size: 100px;
+  font-size: 40px;
   color: #000000;
-  height: 300px;
-  width: 300px;
+  height: 150px;
+  width: 150px;
   background-color: #D8A47F;
   text-align: center;
-  line-height: 300px;
+  line-height: 150px;
   border: 1px solid black;
-  margin: 10px;
+  margin: 5px;
   font-family: 'Share Tech Mono', monospace;
 }
 
 .hiddenO {
   box-sizing: border-box;
   display: none;
-  font-size: 100px;
+  font-size: 40px;
   color: #000000;
-  height: 300px;
-  width: 300px;
+  height: 150px;
+  width: 150px;
   background-color: #DF3B57;
   text-align: center;
-  line-height: 300px;
+  line-height: 150px;
   border: 1px solid black;
-  margin: 10px;
+  margin: 5px;
   font-family: 'Share Tech Mono', monospace;
 }
 
@@ -74,13 +74,13 @@ h1 {
 .countertitle{
   display: inline-block;
   background-color: #EE4B6A;
-  height: 100px;
-  width: 750px;
+  height: 80px;
+  width: 295px;
   vertical-align: top;
-  line-height: 100px;
+  line-height: 80px;
   font-family: 'Share Tech Mono', monospace;
-  font-size: 50px;
-  padding: 15px;
+  font-size: 30px;
+  padding: 20px;
   margin-right: 20px;
   margin-bottom: 20px;
   color: white;
@@ -94,8 +94,8 @@ h1 {
   text-align: center;
   line-height: 100px;
   font-family: 'Share Tech Mono', monospace;
-  font-size: 50px;
-  padding: 20px;
+  font-size: 30px;
+  padding: 10px;
   vertical-align: top;
 }
 
@@ -107,35 +107,35 @@ h1 {
 
 .Player{
   position: fixed;
-  height: 350px;
-  width: 950px;
+  height: 200px;
+  width: 480px;
   background-color: yellow;
-  margin-left: 25px;
-  line-height: 200px;
+  margin-left: 135px;
+  line-height: 100px;
   text-align: center;
   top: 270px;
   font-family: 'Share Tech Mono', monospace;
-  font-size: 50px;
+  font-size: 30px;
 }
 
 .chooseplayer{
   position: absolute;
-  height: 100px;
-  width: 100px;
+  height: 80px;
+  width: 80px;
   left: 350px;
   color: white;
   background-color: black;
   text-align: top;
-  top: 180px;
-  line-height:100px
+  top: 90px;
+  line-height:80px
 }
 
 .x {
-    left: 350px;
+    left: 130px;
 }
 
 .o {
-    left: 500px;
+    left: 250px;
 }
 
 
@@ -156,15 +156,15 @@ h1 {
 
 .Win{
   position: fixed;
-  height: 350px;
-  width: 950px;
+  height: 200px;
+  width: 480px;
   background-image: url("http://24.media.tumblr.com/db20e0fc111a07d4b6cae621a7fb0eff/tumblr_mg10s8fD5x1qki7dgo1_500.gif");
-  margin-left: 25px;
-  line-height: 200px;
+  margin-left: 135px;
+  line-height: 100px;
   text-align: center;
   top: 270px;
   font-family: 'Share Tech Mono', monospace;
-  font-size: 100px;
+  font-size: 50px;
   display: none;
   color: white;
   background-size: cover;
@@ -185,7 +185,7 @@ h1 {
 }*/
 
 .playagain {
-  width: 400px;
-  left: 280px;
-  font-size: 50px;
+  width: 250px;
+  left: 115px;
+  font-size: 30px;
 }
