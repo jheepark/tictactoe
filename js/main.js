@@ -1,41 +1,86 @@
+
+
 const checkClass = function(){
-  if (logic1() || logic2() || logic3() || logic4() || logic5() || logic6() || logic7() || logic8() || logic9() || logic10() || logic11() || logic12() || logic13() || logic14() || logic15() || logic16()){
-  alert ("you have won!");
-  reset();
+  if (logic1() || logic2() || logic3() || logic4() || logic5() || logic6() || logic7() || logic8()) {
+  $('.Win').show(500).append("X Wins");
+    Xwins++;
+    $('.counterXWins').text(Xwins);
+  }  else if (logic9() || logic10() || logic11() || logic12() || logic13() || logic14() || logic15() || logic16()){
+  Message = "O Wins!"
+  $('.Win').show(500).append('O Wins');
+  Owins++;
+  $('.counterOWins').text(Owins);
 } else {
   noWin();
 }
 };
 
+let Xwins = 0
+let Owins = 0
 let numClicks = 0;
 
 const reset = function(){
   $('.hidden').removeClass('hidden').addClass('box').text('');
   $('.hiddenO').removeClass('hiddenO').addClass('box').text('');
   numClicks = 0;
+  $('.Player').toggleClass('hide');
 }
 
 let noWin = function(){
   if (numClicks === 9){
-    alert("You have drawn!");
-    reset();
+  $('.Win').show(500).append('Its a Draw!');
   }
-}
+};
+
+$(document).on('click', '.playagain', function(){
+  $('.Win').hide();
+  reset();
+});
+
+var xplayer = false;
+var oplayer = false;
 
 $(document).on('click', '.box', function(){
+  if (xplayer) {
+    if (numClicks % 2 === 0) {
+    $(this).text('X');
+    $(this).removeClass('box').addClass('hiddenO').css({'display':'inline-block'});
+    numClicks++;
+    checkClass();
+    }
+    else {
+    $(this).text('O');
+    $(this).removeClass('box').addClass('hidden').css({'display':'inline-block'});
+    numClicks++;
+    checkClass();
+    }
+  } else if (oplayer){
   if (numClicks % 2 === 0) {
-  $(this).text('X');
+  $(this).text('O');
   $(this).removeClass('box').addClass('hiddenO').css({'display':'inline-block'});
   numClicks++;
   checkClass();
   }
   else {
-  $(this).text('O');
+  $(this).text('X');
   $(this).removeClass('box').addClass('hidden').css({'display':'inline-block'});
   numClicks++;
   checkClass();
   }
+}
 });
+
+
+$(document).on('click', '.chooseplayer', function(){
+  if ($(this).hasClass('x')){
+    xplayer = true;
+    $('.Player').addClass('hide');
+  } else {
+    oplayer = true;
+    $('.Player').addClass('hide');
+  }
+});
+
 
 let logic1 = function(){
   if ($('#box1').hasClass("hiddenO") && $('#box2').hasClass("hiddenO") && $('#box3').hasClass("hiddenO")) {

@@ -6,43 +6,34 @@ body {
 .container {
   box-sizing: border-box;
   margin: 0 auto;
-  width: 1200px;
+  width: 1000px;
   padding-bottom: 200px;
 }
 .boxes {
   box-sizing: border-box;
-  width: 1200px;
+  width: 1000px;
   margin: 0 auto;
   text-align: center;
 }
 h1 {
   box-sizing: border-box;
-  padding: 10px 0;
   font-size: 120px;
-  color: rgb(135, 26, 222);
+  color: black;
   text-align: center;
   font-family: 'Share Tech Mono', monospace;
+  margin-bottom: 50px;
 }
 .box {
   box-sizing: border-box;
   display: inline-block;
   height: 300px;
   width: 300px;
-  background-color: #00aeef;
+  background-color: #0F7173;
   text-align: center;
   margin: 10px;
   line-height: 300px;
   vertical-align: top;
 }
-
-/*.hiddenbox {
-  display: inline-block;
-  height: 200px;
-  width: 200px;
-  background-color: rgb(147, 169, 180);
-  text-align: center;
-  margin: 10px;
-}*/
 
 .hidden {
   box-sizing: border-box;
@@ -51,7 +42,7 @@ h1 {
   color: #000000;
   height: 300px;
   width: 300px;
-  background-color: rgb(156, 74, 255);
+  background-color: #D8A47F;
   text-align: center;
   line-height: 300px;
   border: 1px solid black;
@@ -66,10 +57,135 @@ h1 {
   color: #000000;
   height: 300px;
   width: 300px;
-  background-color: rgb(255, 94, 220);
+  background-color: #DF3B57;
   text-align: center;
   line-height: 300px;
   border: 1px solid black;
   margin: 10px;
   font-family: 'Share Tech Mono', monospace;
+}
+
+.counters {
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+}
+
+.countertitle{
+  display: inline-block;
+  background-color: #EE4B6A;
+  height: 100px;
+  width: 750px;
+  vertical-align: top;
+  line-height: 100px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 50px;
+  padding: 15px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.Wins {
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  background-color: #EF8354;
+  text-align: center;
+  line-height: 100px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 50px;
+  padding: 20px;
+  vertical-align: top;
+}
+
+.box:hover {
+  cursor: pointer;
+  background-color: #DBEBC0;
+}
+
+
+.Player{
+  position: fixed;
+  height: 350px;
+  width: 950px;
+  background-color: yellow;
+  margin-left: 25px;
+  line-height: 200px;
+  text-align: center;
+  top: 270px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 50px;
+}
+
+.chooseplayer{
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  left: 350px;
+  color: white;
+  background-color: black;
+  text-align: top;
+  top: 180px;
+  line-height:100px
+}
+
+.x {
+    left: 350px;
+}
+
+.o {
+    left: 500px;
+}
+
+
+.chooseplayer:hover{
+  cursor: pointer;
+  background-color: #DBEBC0;
+  color: black;
+}
+
+.hide {
+  display:none;
+}
+
+.Player:hover{
+  background-color: turquoise;
+}
+
+
+.Win{
+  position: fixed;
+  height: 350px;
+  width: 950px;
+  background-image: url("http://24.media.tumblr.com/db20e0fc111a07d4b6cae621a7fb0eff/tumblr_mg10s8fD5x1qki7dgo1_500.gif");
+  margin-left: 25px;
+  line-height: 200px;
+  text-align: center;
+  top: 270px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 100px;
+  display: none;
+  color: white;
+  background-size: cover;
+}
+
+/*.Draw{
+  position: fixed;
+  height: 350px;
+  width: 950px;
+  background-color: pink;
+  margin-left: 25px;
+  line-height: 350px;
+  text-align: center;
+  top: 270px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 50px;
+  display: none;
+}*/
+
+.playagain {
+  width: 400px;
+  left: 280px;
+  font-size: 50px;
 }
