@@ -168,6 +168,8 @@ h1 {
   display: none;
   color: white;
   background-size: cover;
+  text-shadow: 2px 2px 1px rgba(0,0,0,0.3), 0 0px 5px #fff, 0 0 10px yellow, 0 0 50px yellow;
+  box-shadow: 2px 2px 1px rgba(0,0,0,0.3), 0 0px 5px #fff, 0 0 10px yellow, 0 0 50px yellow;
 }
 
 /*.Draw{
@@ -188,4 +190,9 @@ h1 {
   width: 250px;
   left: 115px;
   font-size: 30px;
+}
+
+.playagain:hover{
+  background-color: white;
+  box-shadow: 2px 2px 1px rgba(0,0,0,0.3), 0 0px 5px #fff, 0 0 10px yellow, 0 0 50px yellow;
 }

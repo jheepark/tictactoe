@@ -3,6 +3,8 @@ let boardArray = [1,2,3,4,5,6,7,8,9];
 let xPlayer = true;
 let oPlayer = false;
 
+if iddiv1
+
 $(document).on('click', '.chooseplayer', function(){
   if ($(this).hasClass('x')){
     xPlayer = true;
