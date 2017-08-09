@@ -210,3 +210,8 @@ let logic16 = function(){
     return false;
   }
 };
+
+let oAudio = $("#oSound")[0];
+$(".o").mouseenter(function() {
+		oAudio.play();
+	});
