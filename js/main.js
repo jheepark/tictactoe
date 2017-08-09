@@ -1,3 +1,5 @@
+console.log("%cHello and welcome to my Tic Tac Toe!", "background: rgba(136, 4, 247, 0.87);color:#FFF;padding:5px;border-radius: 5px;line-height: 26px;");
+
 const checkClass = function(){
   if (logic1() || logic2() || logic3() || logic4() || logic5() || logic6() || logic7() || logic8()) {
   $('.Win').show(500).append("<span class='winmessage'>X Wins</span>");
