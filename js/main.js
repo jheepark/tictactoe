@@ -56,13 +56,13 @@ $(document).on('click', '.box', function(){
   } else if (oplayer){
   if (numClicks % 2 === 0) {
   $(this).text('O');
-  $(this).removeClass('box').addClass('hiddenO').css({'display':'inline-block'});
+  $(this).removeClass('box').addClass('hidden').css({'display':'inline-block'});
   numClicks++;
   checkClass();
   }
   else {
   $(this).text('X');
-  $(this).removeClass('box').addClass('hidden').css({'display':'inline-block'});
+  $(this).removeClass('box').addClass('hiddenO').css({'display':'inline-block'});
   numClicks++;
   checkClass();
   }
