@@ -3,11 +3,13 @@ const checkClass = function(){
   $('.Win').show(500).append("<span class='winmessage'>X Wins</span>");
     Xwins++;
     $('.counterXWins').text(Xwins);
+    $("#winnerSound")[0].play();
   }  else if (logic9() || logic10() || logic11() || logic12() || logic13() || logic14() || logic15() || logic16()){
   Message = "O Wins!"
   $('.Win').show(500).append("<span class='winmessage'>O Wins</span>");
   Owins++;
   $('.counterOWins').text(Owins);
+  $("#winnerSound")[0].play();
 } else {
   noWin();
 }
@@ -28,6 +30,7 @@ const reset = function(){
 let noWin = function(){
   if (numClicks === 9){
   $('.Win').show(500).append("<span class='winmessage'>It's a Draw!</span>");
+  $("#winnerSound")[0].play();
   }
 };
 
