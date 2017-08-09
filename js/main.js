@@ -1,3 +1,4 @@
+//messages to people opening up the inspector
 console.log("%cHello and welcome to my...", "background: rgba(136, 4, 247, 0.87);color:#FFF;padding:5px;border-radius: 5px;line-height: 26px;");
 
 
@@ -5,13 +6,14 @@ console.log ("     %c_T_|_I_|_C_","background: rgb(246, 48, 208);color:#FFF;padd
 console.log ("     %c_T_|_A_|_C_", "background: rgb(246, 48, 208);color:#FFF;padding:2px;border-radius: 5px;line-height: 10px;");
 console.log ("     %c_T_|_O_|_E_", "background: rgb(246, 48, 208);color:#FFF;padding:2px;border-radius: 5px;line-height: 10px;");
 
+//checking to see if there is a winner
 const checkClass = function(){
-  if (logic1() || logic2() || logic3() || logic4() || logic5() || logic6() || logic7() || logic8()) {
+  if (XWins123() || XWins456() || XWins789() || XWins147() || XWins258() || XWins369() || XWins159() || XWins357()) {
   $('.Win').show(500).append("<span class='winmessage'>X Wins</span>");
     Xwins++;
     $('.counterXWins').text(Xwins);
     $("#winnerSound")[0].play();
-  }  else if (logic9() || logic10() || logic11() || logic12() || logic13() || logic14() || logic15() || logic16()){
+  }  else if (OWins123() || OWins456() || OWins789() || OWins147() || OWins258() || OWins369() || OWins159() || OWins357()){
   Message = "O Wins!"
   $('.Win').show(500).append("<span class='winmessage'>O Wins</span>");
   Owins++;
@@ -26,6 +28,7 @@ let Xwins = 0
 let Owins = 0
 let numClicks = 0;
 
+//reseting the screen back to its default
 const reset = function(){
   $('.hidden').removeClass('hidden').addClass('box').text('');
   $('.hiddenO').removeClass('hiddenO').addClass('box').text('');
@@ -34,6 +37,7 @@ const reset = function(){
   $('.Player').removeClass('hide');
 }
 
+//if there is a draw
 let noWin = function(){
   if (numClicks === 9){
   $('.Win').show(500).append("<span class='winmessage'>It's a Draw!</span>");
@@ -41,6 +45,7 @@ let noWin = function(){
   }
 };
 
+//the play again window
 $(document).on('click', '.playagain', function(){
   $('.Win').hide();
   reset();
@@ -49,6 +54,7 @@ $(document).on('click', '.playagain', function(){
 var xplayer = false;
 var oplayer = false;
 
+//this is initiated when any box in tic tac toe is clicked
 $(document).on('click', '.box', function(){
   if (xplayer) {
     if (numClicks % 2 === 0) {
@@ -79,7 +85,7 @@ $(document).on('click', '.box', function(){
 }
 });
 
-
+//initial chooseplayer screen
 $(document).on('click', '.chooseplayer', function(){
   if ($(this).hasClass('x')){
     xplayer = true;
@@ -90,8 +96,8 @@ $(document).on('click', '.chooseplayer', function(){
   }
 });
 
-
-let logic1 = function(){
+//All my logic for X winning
+let XWins123 = function(){
   if ($('#box1').hasClass("hiddenO") && $('#box2').hasClass("hiddenO") && $('#box3').hasClass("hiddenO")) {
     return true;
   } else {
@@ -99,7 +105,7 @@ let logic1 = function(){
   }
 };
 
-let logic2 = function() {
+let XWins456 = function() {
   if ($('#box4').hasClass("hiddenO") && $('#box5').hasClass("hiddenO") && $('#box6').hasClass("hiddenO")) {
     return true;
   } else {
@@ -107,7 +113,7 @@ let logic2 = function() {
   }
 };
 
-let logic3 = function(){
+let XWins789 = function(){
   if ($('#box7').hasClass("hiddenO") && $('#box8').hasClass("hiddenO") && $('#box9').hasClass("hiddenO")) {
     return true;
   } else {
@@ -116,7 +122,7 @@ let logic3 = function(){
 };
 
 
-let logic4 = function(){
+let XWins147 = function(){
   if ($('#box1').hasClass("hiddenO") && $('#box4').hasClass("hiddenO") && $('#box7').hasClass("hiddenO")) {
     return true;
   } else {
@@ -124,7 +130,7 @@ let logic4 = function(){
   }
 };
 
-let logic5 = function() {
+let XWins258 = function() {
   if ($('#box2').hasClass("hiddenO") && $('#box5').hasClass("hiddenO") && $('#box8').hasClass("hiddenO")) {
     return true;
   } else {
@@ -132,7 +138,7 @@ let logic5 = function() {
   }
 };
 
-let logic6 = function(){
+let XWins369 = function(){
   if ($('#box3').hasClass("hiddenO") && $('#box6').hasClass("hiddenO") && $('#box9').hasClass("hiddenO")) {
     return true;
   } else {
@@ -140,7 +146,7 @@ let logic6 = function(){
   }
 };
 
-let logic7 = function() {
+let XWins159 = function() {
   if ($('#box1').hasClass("hiddenO") && $('#box5').hasClass("hiddenO") && $('#box9').hasClass("hiddenO")) {
     return true;
   } else {
@@ -148,7 +154,7 @@ let logic7 = function() {
   }
 };
 
-let logic8 = function(){
+let XWins357 = function(){
   if ($('#box3').hasClass("hiddenO") && $('#box5').hasClass("hiddenO") && $('#box7').hasClass("hiddenO")) {
     return true;
   } else {
@@ -156,7 +162,9 @@ let logic8 = function(){
   }
 };
 
-let logic9 = function(){
+//All logic for O Winning
+
+let OWins123 = function(){
   if ($('#box1').hasClass("hidden") && $('#box2').hasClass("hidden") && $('#box3').hasClass("hidden")) {
     return true;
   } else {
@@ -164,7 +172,7 @@ let logic9 = function(){
   }
 };
 
-let logic10 = function() {
+let OWins456 = function() {
   if ($('#box4').hasClass("hidden") && $('#box5').hasClass("hidden") && $('#box6').hasClass("hidden")) {
     return true;
   } else {
@@ -172,7 +180,7 @@ let logic10 = function() {
   }
 };
 
-let logic11 = function(){
+let OWins789 = function(){
   if ($('#box7').hasClass("hidden") && $('#box8').hasClass("hidden") && $('#box9').hasClass("hidden")) {
     return true;
   } else {
@@ -181,7 +189,7 @@ let logic11 = function(){
 };
 
 
-let logic12 = function(){
+let OWins147 = function(){
   if ($('#box1').hasClass("hidden") && $('#box4').hasClass("hidden") && $('#box7').hasClass("hidden")) {
     return true;
   } else {
@@ -189,7 +197,7 @@ let logic12 = function(){
   }
 };
 
-let logic13 = function() {
+let OWins258 = function() {
   if ($('#box2').hasClass("hidden") && $('#box5').hasClass("hidden") && $('#box8').hasClass("hidden")) {
     return true;
   } else {
@@ -197,7 +205,7 @@ let logic13 = function() {
   }
 };
 
-let logic14 = function(){
+let OWins369 = function(){
   if ($('#box3').hasClass("hidden") && $('#box6').hasClass("hidden") && $('#box9').hasClass("hidden")) {
     return true;
   } else {
@@ -205,7 +213,7 @@ let logic14 = function(){
   }
 };
 
-let logic15 = function() {
+let OWins159 = function() {
   if ($('#box1').hasClass("hidden") && $('#box5').hasClass("hidden") && $('#box9').hasClass("hidden")) {
     return true;
   } else {
@@ -213,7 +221,7 @@ let logic15 = function() {
   }
 };
 
-let logic16 = function(){
+let OWins357 = function(){
   if ($('#box3').hasClass("hidden") && $('#box5').hasClass("hidden") && $('#box7').hasClass("hidden")) {
     return true;
   } else {
