@@ -21,8 +21,8 @@ const reset = function(){
   $('.hidden').removeClass('hidden').addClass('box').text('');
   $('.hiddenO').removeClass('hiddenO').addClass('box').text('');
   numClicks = 0;
-  $('.Player').toggleClass('hide');
   $('.winmessage').remove();
+  $('.Player').removeClass('hide');
 }
 
 let noWin = function(){
@@ -212,6 +212,11 @@ let logic16 = function(){
 };
 
 let oAudio = $("#oSound")[0];
-$(".o").mouseenter(function() {
-		oAudio.play();
-	});
+  $(".o").mouseenter(function() {
+	oAudio.play();
+});
+
+let xAudio = $("#xSound")[0];
+  $(".x").mouseenter(function() {
+  xAudio.play();
+});
