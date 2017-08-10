@@ -14,13 +14,14 @@ const checkClass = function(){
     $('.counterXWins').text(Xwins);
     $("#winnerSound")[0].play();
   }  else if (OWins123() || OWins456() || OWins789() || OWins147() || OWins258() || OWins369() || OWins159() || OWins357()){
-  Message = "O Wins!"
   $('.Win').show(500).append("<span class='winmessage'>O Wins</span>");
   Owins++;
   $('.counterOWins').text(Owins);
   $("#winnerSound")[0].play();
-} else {
+} else if (numClicks === 9){
   noWin();
+} else {
+  aiClick();
 }
 };
 
@@ -39,9 +40,16 @@ const reset = function(){
 
 //if there is a draw
 let noWin = function(){
-  if (numClicks === 9){
   $('.Win').show(500).append("<span class='winmessage'>It's a Draw!</span>");
   $("#winnerSound")[0].play();
+};
+
+//determining if it is the players turn or AI turn
+let aiClick = function(){
+  if (xplayer && (numClicks % 2 !== 0)){
+    $('.box').random().click();
+  } else if (oplayer && (numClicks % 2 !== 0)){
+      $('.box').random().click();
   }
 };
 
@@ -53,6 +61,12 @@ $(document).on('click', '.playagain', function(){
 
 var xplayer = false;
 var oplayer = false;
+
+//function for random
+jQuery.fn.random = function() {
+    var randomIndex = Math.floor(Math.random() * this.length);
+    return jQuery(this[randomIndex]);
+};
 
 //this is initiated when any box in tic tac toe is clicked
 $(document).on('click', '.box', function(){
@@ -231,10 +245,12 @@ let OWins357 = function(){
 
 let oAudio = $("#oSound")[0];
   $(".o").mouseenter(function() {
+    xAudio.pause();
 	oAudio.play();
 });
 
 let xAudio = $("#xSound")[0];
   $(".x").mouseenter(function() {
+    oAudio.pause();
   xAudio.play();
 });
