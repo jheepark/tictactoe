@@ -6,9 +6,9 @@ A simple tic tac toe implementation in Javascript for Project 0 in WDI 23.
 
 To view project [CLICKHERE](http://jheepark.github.io/tictactoe) :sparkles:
 
-** Author:**  Jae-Hee Park
+**Author:**  Jae-Hee Park
 
-** Date: ** 11.08.2017
+**Date:** 11.08.2017
 
 Created using HTML5, CSS3 and Javascript
 
